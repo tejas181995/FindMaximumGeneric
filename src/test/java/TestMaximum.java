@@ -40,4 +40,21 @@ public class TestMaximum {
         Float maxFloat = Maximum.maxFloat(2.5f, 8.2f, 11.8f);
         Assert.assertEquals(Float.valueOf(11.8f), maxFloat);
     }
+    @Test
+    public void givenThreeString_AtFirstPosition_ShouldReturnMaximumValue() {
+        String maxString = Maximum.maxString("Papaya", "Apple", "Grapes");
+        Assert.assertEquals("Papaya", maxString);
+    }
+
+    @Test
+    public void givenThreeString_AtSecondPosition_ShouldReturnMaximumValue() {
+        String maxString = Maximum.maxString("Apple", "Grapes", "Banana");
+        Assert.assertEquals("Grapes", maxString);
+    }
+
+    @Test
+    public void givenThreeString_AtThirdPosition_ShouldReturnMaximumValue() {
+        String maxString = Maximum.maxString("Apple", "Banana", "CustardApple");
+        Assert.assertEquals("CustardApple", maxString);
+    }
 }
